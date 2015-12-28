@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Dynamic;
@@ -83,7 +84,7 @@ namespace LoLStore
 
                 int id = 0;
                 int current = 0;
-                object[] tickers = (object[])robj["tickers"];
+                ArrayList tickers = (ArrayList)robj["tickers"];
                 foreach(object o in tickers)
                 {
                     var ticker=o as Dictionary<string, object>;
